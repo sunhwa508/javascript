@@ -22,10 +22,12 @@ export function App() {
       count.current = 0;
       ++curr.current;
     }
+
     if (e.currentTarget.value === '삭제') {
       console.log(currentLevel.current, curr.current);
       return;
     }
+
     if (e.currentTarget.value === '삭제') {
       setIsAbled(true);
       if (curr.current === 0 && count.current === 0) {
@@ -49,6 +51,7 @@ export function App() {
         return temp;
       });
     }
+
     if (e.currentTarget.value === 'ENTER') {
       setIsAbled(true);
       if (arr[curr.current - 1].join('').length === 5) {
@@ -64,6 +67,7 @@ export function App() {
       }
     }
   };
+
   useEffect(() => {
     arr.map((item) => {
       if (item.join('').length === 5) {
