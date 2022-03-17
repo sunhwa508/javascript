@@ -6,8 +6,24 @@
   border-radius: 0.5em;
   position: relative;
   cursor: pointer;
+  transition: transform 250ms ease-in-out;
 }
-.toast::after {
+.toast-container[data-position$='-right'] .toast {
+  transform: translateX(110%);
+}
+
+.toast-container[data-position$='-left'] .toast {
+  transform: translateX(-110%);
+}
+
+.toast-container[data-position$='-center'] .toast {
+  transform: translateY(-110%);
+}
+
+.toast-container .toast.show {
+  transform: translateX(0);
+}
+.toast.can-close::after {
   content: '\00D7';
   position: absolute;
   top: 2px;
