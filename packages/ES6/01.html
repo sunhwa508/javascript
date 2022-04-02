@@ -63,4 +63,26 @@
 
     f1(3, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   </script>
+
+  <!-- while을 range로 -->
+  <!-- 효과를 each로 구분 -->
+
+  <script>
+    function f3(end) {
+      let i = 1;
+      while (i < end) {
+        console.log(i);
+        i += 2;
+      }
+    }
+    f3(10);
+
+    function f4(end) {
+      _go.(
+        L.range(1, end, 2),
+        _.each(console.log)
+      )
+    }
+    f4(10);
+  </script>
 </body>
