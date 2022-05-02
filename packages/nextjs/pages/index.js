@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const BASE_URL = 'https://coffee.alexflipnote.dev/';
   return (
     <div>
       <Head>
