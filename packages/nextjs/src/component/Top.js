@@ -1,6 +1,6 @@
-import React from "react";
-import { Header } from "semantic-ui-react";
-import Gnb from "./Gnb";
+import React from 'react';
+import { Header } from 'semantic-ui-react';
+import Gnb from './Gnb';
 const Top = () => {
   return (
     <div>

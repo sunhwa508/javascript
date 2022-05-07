@@ -7,7 +7,9 @@
   ],
   "scripts": {
     "start:wordle": "npm run dev -w ./packages/wordle",
-    "start:toast": "npm run start -w ./packages/toast",
+    "start:toast": "npm run dev -w ./packages/toast",
+    "start:next": "npm run dev -w ./packages/nextjs",
+    "start:nextbuild": "npm run build -w ./packages/nextjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
