@@ -66,3 +66,37 @@ function bind(fn, obj) {
     fn.apply(obj, arguments);
   };
 }
+
+class Counter {
+  count = 1;
+  increment() {
+    console.log(this);
+    this.count += 1;
+  }
+}
+
+const counter = new Counter();
+const { increment } = counter;
+
+increment.call(counter); //this를 찾아준다.
+increment.bind(counter)();
+console.log(counter.count);
+
+// class Counter {
+//   count = 1;
+
+//   this나 super에 대한 바인딩이 없고, methods 로 사용될 수 없습니다.
+//   클래스 필드 click = () => {...}는 각 Button 객체마다 독립적인
+//   함수를 만들어주고 이 함수의 this를 해당 객체에 바인딩시켜줍니다.
+//   this엔 항상 의도한 값이 들어가게 됩니다.
+
+//   increment = () => {
+//     console.log(this);
+//     this.count += 1;
+//   };
+// }
+// const counter = new Counter();
+// const { increment } = counter;
+
+// increment();
+// console.log(counter.count);
