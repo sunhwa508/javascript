@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nextjs
 
-## Getting Started
+static pre-rendering 이라고 부르는 서버 랜더링(server rendering)
+Next.js 는 server rendering을 아주 쉽게 하는 하나의 리책트 프레임워크 입니다.
 
-First, run the development server:
+# 주요기능
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Hot Code Reloading : 디스크에 변화가 생기면 Next.js는 페이지를 리로드합니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Automatic Routing : pages 폴더에 있는 파일에 대해 어떤 URL이라도 파일 시스템에 매핑됩니다.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Single File Components : 컴포넌트 영역에 스타일을 추가할 수 있습니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Server Rendering : 클라이언트로 HTML을 전송하기 전에 서버에서 리액트 컴포넌트를 렌더링할 수 있습니다.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Ecosystem Compatibility : 자바스크립트, 노드, 리액트 생태계에 잘 흡수되어 있습니다.
 
-## Learn More
+- Automatic Code Splitting : 페이지들은 자신이 필요로 하는 자바스크립트 파일과 라이브러리들만 렌더링합니다. 모든 app 코드가 함축된 하나의 자바스크립트 파일이 아닌, 다른 리소스들로 해체됩니다. 페이지를 로딩하면 오로지 해당 페이지에 필요한 자바스크립트를 로드합니다. 단, 전체 사이트 화면의 최소 절반이 쓰는, 주기적인 자바스크립트 파일과 라이브러리는 메인 자바스크립트 번들로 이동됩니다.
 
-To learn more about Next.js, take a look at the following resources:
+- Prefetching : 두 개의 다른 페이지를 연결하는 Link 컴포넌트는 백그라운드에서 자동으로 페이지 리소스(코드 스플리팅에 의해 분리된 코드를 포함하여)를 사전에 fetch하는 prefetch 프로퍼티를 지원합니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Dynamic Components : 자바스크립트 모듈, 리액트 컴포넌트를 동적으로 import 할 수 있습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- TypeScript Support : Next.js는 타입스크립트로 만들어졌으므로 타입스크립트를 잘 지원합니다.
