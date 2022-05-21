@@ -16,7 +16,16 @@ https://parang.tech/react/2022-react-03/
 
 notifyOnChangeProps
 
-- props 중 하나가 변경될 경우에만 해당 observer에게 변경 사항을 알려주도록 observer 수준에서 설정할 수 있습니다
+- props 중 하나가 변경될 경우에만 해당 observer에게 변경 사항을 알려주고 리랜더 됩니다.
+  observer 수준에서 설정할 수 있습니다.
+- If set, the component will only re-render if any of the listed properties change.
+- If set to ['data', 'error'] for example, the component will only re-render when the data or error properties change.
+- If set to "tracked", access to properties will be tracked, and the component will only re-render when one of the tracked properties change.
+
+notifyOnChangePropsExclusions: string[]
+
+- If set, the component will not re-render if any of the listed properties change.
+- If set to ['isStale'] for example, the component will not re-render when the isStale property changes.
 
 ```javascript
 function TodoCounter() {
