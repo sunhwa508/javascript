@@ -234,3 +234,92 @@ declare, export 만 들어갈 수 있다.
 <img width="1099" alt="image" src="https://user-images.githubusercontent.com/61695175/169827894-57e02917-a77e-4c20-a743-eebb223dfa8f.png">
 <img width="1126" alt="image" src="https://user-images.githubusercontent.com/61695175/169828521-64b11720-5d02-4123-b46a-f932750a37b6.png">
 declare , abstact 동일하게 동작함
+
+DI 의존성 주입
+어떤 객체에 다른 객체가 쓰임 => 의존
+
+어떤 객체 내부에서 다른 객체를 생성하지 않고 외부에서 다른 객체를 넣음 => 주입
+
+<img width="384" alt="image" src="https://user-images.githubusercontent.com/61695175/170984291-6118a2cf-c1b7-476a-a090-b62891f12f46.png">
+
+IOC 제어의 역전
+Inversion of Control
+
+내부에서 선언한거보다 외부에서 주입하는게 확장성에 용이하다.
+
+자바스크립트에서 객체지향??
+
+<img width="583" alt="image" src="https://user-images.githubusercontent.com/61695175/170986792-22c1bc57-cbbb-47b9-98f8-2d60f7b2b232.png">
+
+프로토타입 체이닝에 인해 프로토에서 상위 객체의 매소드를 사용 할 수 있게 된다.
+
+타입스크립트? 객체 지향 프로그래밍을 해야하나요?
+
+DDD Domamin Driven Design
+
+개념 설계와 구체 설계로 나뉨
+
+model
+데이터와 상태를 가진 객체
+
+Type Widening
+Type Narrowing
+
+대입된 값을 '할당 가능한 값들의 집합으로 유추' 해야 한다는 것
+
+<img width="386" alt="image" src="https://user-images.githubusercontent.com/61695175/170990722-f1cb5510-529e-4795-8902-fe174387850a.png">
+string이면 뭐든 다 되는 변수라고 추론하고 있습니다.
+
+let coffeeName = 'americano'
+coffeeName 'americano'가 아닌 string 으로 추론된다.
+
+자스 런타임 : 모든 변수는 유일한 값
+타스 : 모든 변수는 가능한 값들의 집합
+
+const coffeeName = 'americano'  
+오류 사라짐 => 상수이니까
+
+<img width="496" alt="image" src="https://user-images.githubusercontent.com/61695175/170991390-e2394ec0-be8e-4d8f-92e8-a6d8592bfdb3.png">
+
+const a = 'x'
+// a 는 'x'
+
+const b = { a : '1'}
+// a 는 string
+
+const b = { a : '1'} as const
+// a 는 '1'
+
+타입 좁히기!
+
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/61695175/170992109-ab33b842-2d17-4537-9c78-f7a0dc01d945.png">
+
+타입 범위 좁히는 방법
+
+1. if문으로 null, undefined 체크하기
+
+<img width="307" alt="image" src="https://user-images.githubusercontent.com/61695175/170993303-796dc8d0-f01e-49bf-a78a-2a9079c8b725.png">
+
+2. instanceof 사용하기
+3. 속성 체크하기(in연산자)
+
+<img width="371" alt="image" src="https://user-images.githubusercontent.com/61695175/170993632-ffbc85c1-a060-458c-9aa4-20e91280eb08.png">
+
+4. 태그된 유니온과 구별된 유니온 활용하기
+   <img width="583" alt="image" src="https://user-images.githubusercontent.com/61695175/170993754-f1855793-c423-4bf3-aecf-e9a7e222358e.png">
+
+- 태그된 유니온
+
+<img width="484" alt="image" src="https://user-images.githubusercontent.com/61695175/170994199-fc71dd73-d704-40dc-8b8f-cda370fd55ff.png">
+
+- 구별된 유니온
+
+<img width="358" alt="image" src="https://user-images.githubusercontent.com/61695175/170994454-f104ec83-7b80-493d-882f-c74aa04acd46.png">
+
+5. 사용자 정의 타입 가드 사용하기(is 연산자)
+
+<img width="558" alt="image" src="https://user-images.githubusercontent.com/61695175/170995036-ea6c0913-32a6-4a1a-b580-6f68763652ed.png">
+
+리턴값이 참이면 해당 타입니다
+
+<img width="304" alt="image" src="https://user-images.githubusercontent.com/61695175/170995974-cef7ce20-14ec-4067-9af7-d7abd46ecd46.png">
